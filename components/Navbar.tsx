@@ -1,7 +1,6 @@
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -13,7 +12,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import React, { Dispatch, FC, SetStateAction } from "react";
+import React, { Dispatch, FC, SetStateAction, useEffect } from "react";
 
 const Navbar: FC<{
   setCurrentRoute: Dispatch<SetStateAction<string>>;
@@ -25,6 +24,8 @@ const Navbar: FC<{
     setCurrentRoute(page);
     onClose();
   };
+
+
 
   return (
     <>

@@ -1,12 +1,12 @@
 import React from 'react'
-import MoviesList from '../MoviesList'
+import TableList from '../Table'
 import PageLayout from '../PageLayout'
 
 const Screening = () => {
     return(
-        <PageLayout className="movies-table">
+        <PageLayout className="screening-table">
             SCREENINGS
-            <MoviesList />
+            {/* <TableList /> */}
         </PageLayout>
     )
 }

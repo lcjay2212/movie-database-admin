@@ -1,10 +1,10 @@
-import Navbar from "./Navbar";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 const PageLayout = ({ children, className }) => {
   return (
     <>
       {/* <Navbar /> */}
-      <div>{children}</div>
+      <div className={className}>{children}</div>
     </>
   );
 };
