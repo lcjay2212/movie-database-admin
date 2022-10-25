@@ -14,3 +14,75 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress > .bar {
+  background: green;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+}
+#nprogress > .peg {
+  display: block;
+  position: absolute;
+  right: 0rem;
+  width: 6.25rem;
+  height: 100%;
+  box-shadow: 0 0 0.625rem green, 0 0 0.313rem green;
+  opacity: 1;
+  --webkit-transform: rotate(3deg) translate(0rem, -0.25rem);
+  --ms-transform: rotate(3deg) translate(0rem, -0.25rem);
+  transform: rotate(3deg) translate(0rem, -0.25rem);
+}
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  top: 0.938rem;
+  right: 0.938rem;
+}
+
+#nprogress .spinner-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  border: solid 0.125rem transparent;
+  border-top-color: green;
+  border-left-color: green;
+  border-radius: 50%;
+  --webkit-animation: nprogress-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite;
+}
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+.nprogress-custom-parent #nprogress .spinner {
+  position: absolute;
+}
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0%: {
+    transform: rotate(0deg);
+  }
+  100%: {
+    transform: rotate(360deg);
+  }
+}
+@keyframes nprogress-spinner {
+  0%: {
+    transform: rotate(0deg);
+  }
+  100%: {
+    transform: rotate(360deg);
+  }
+}
